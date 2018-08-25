@@ -1,0 +1,31 @@
+{
+  "name": "todo-api",
+  "version": "1.0.0",
+  "description": "todo API",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/ameyzagade/todo-api.git"
+  },
+  "keywords": [
+    "todo",
+    "API",
+    "tasks"
+  ],
+  "author": "ameyzagade",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://gitlab.com/ameyzagade/todo-api/issues"
+  },
+  "homepage": "https://gitlab.com/ameyzagade/todo-api#README",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3",
+    "mongoose": "^5.2.9",
+    "mongoose-unique-validator": "^2.0.1"
+  }
+}
