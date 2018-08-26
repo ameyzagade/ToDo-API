@@ -3,19 +3,24 @@ const mongoose = require('mongoose');
 
 
 // create schema 
-const taskSchema = mongoose.Schema({
-    task:    {
-        name:       String,             
-        required:   true,                   // required, cannot be skipped
-        unique:     true,                   // has to be unique
-        minlength:  1                       // cannot be blank, has to be minimum 1 letter long
+const taskSchema = mongoose.Schema(
+    {
+        task:    {
+            type:       String,             
+            required:   true,               // required, cannot be skipped
+            unique:     true,               // has to be unique
+            minlength:  1,                  // cannot be blank, has to be minimum 1 letter long
+        },
+        checked:    {
+            type:       Boolean,
+            required:   true,
+            default:    false,              // set explicitly, defaults to false
+        }
     },
-    checked:    {
-        type:       Boolean,
-        default:    false                   // set explicitly, defaults to false
-    },
-    timestamps:     true                    // auto update createdAt and updatedAt properties
-});
+    {
+        timestamps:     true                // auto update createdAt and updatedAt properties
+    }
+);
 
 
 // export model
